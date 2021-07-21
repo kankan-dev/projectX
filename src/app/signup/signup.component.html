@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <form class="form" [formGroup]="signupForm" (ngSubmit)="submit(signupForm)">
+                <div class="card card-box">
+                    <label class="font-weight-bold" for="uname">Username</label>
+                    <input class="form-control" formControlName="uname" type="text" id="uname" required/>
+
+
+                    <label class="font-weight-bold" for="email">Email Id</label>
+                    <input class="form-control" formControlName="email" type="email" id="email" required/>
+
+                    <label class="font-weight-bold" for="address">Address</label>
+                    <input class="form-control" formControlName="address" type="text" id="address" required/>
+
+                    <label class="font-weight-bold" for="phone">Phone Number</label>
+                    <input class="form-control" formControlName="phone" type="text" id="phone" required/>
+
+                   <label class="font-weight-bold" for="gender">Gender</label>
+                   <select class="form-control" id="gender" formControlName="gender" >
+                    <option value= "" selected disabled>Choose</option>
+                    <option *ngFor = "let sex of gender" [value] = "sex.value">{{sex.name}}</option>
+                      
+                   </select>
+                 
+
+                   <label for="dob" class="font-weight-bold">Date Of Birth</label>
+                   <input type="date" class="form-control" id="dob" formControlName="dob">
+                  
+
+                   <label class="font-weight-bold" for="password">Password</label>
+                    <input class="form-control" autocomplete="off" formControlName="password" type="password" id="password" required/>
+
+                    <label class="font-weight-bold" for="cpassword">Confirm Password</label>
+                    <div *ngIf="isNotMatching" >
+                        <span class="text-danger">Password Not Matching</span>
+
+                    </div>
+                    <input class="form-control" autocomplete="off"  formControlName="cpassword" type="password" id="cpassword" required/>
+
+                    <div class="row">
+                        <div class="col-sm-2" style="margin-right:10px">
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </div>
+                        <div class="col-sm-2">
+                            <button class="btn btn-danger"type = "reset">Reset</button>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </form>
+        </div>
+    </div>
+</div>
+

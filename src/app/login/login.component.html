@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <form class="form" [formGroup]="loginForm" (ngSubmit) = submit(loginForm)>
+                <div class="card card-box">
+                    <label class="font-weight-bold" for="email">Email Id</label>
+                    <input class="form-control" formControlName="email" type="email" id="loginemail" required/>
+
+                    <label class="font-weight-bold" for="password">Password</label>
+                    <input class="form-control" autocomplete="off" formControlName="password" type="password" id="loginpassword" required/>
+
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <button mat-raised-button color="accent" type="submit">Submit</button>
+                        </div>
+                        <div class="col-sm-2">
+                           
+                        </div>
+                    </div>
+                </div>
+                
+
+            </form>
+        </div>
+    </div>
+</div>
