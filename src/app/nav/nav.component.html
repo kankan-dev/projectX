@@ -24,10 +24,10 @@
         </li></ul> -->
       
       <ul class="navbar-nav ml-auto">
-        <a [matMenuTriggerFor]="beforeMenu"><i class="fas fa-cog fa-lg"></i></a>
+        <a  [matMenuTriggerFor]="beforeMenu"><i class="fas fa-cog fa-lg"></i></a>
         
         <mat-menu #beforeMenu="matMenu" xPosition="before">
-          <button mat-menu-item>Profile</button>
+          <button mat-menu-item routerLink="/dashboard/profile">Profile</button>
           <button mat-menu-item (click)= "logout()">Log Out</button>
         </mat-menu>
           <!-- <li class="nav-item dropdown">

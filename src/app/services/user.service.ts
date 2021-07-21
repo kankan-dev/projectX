@@ -26,4 +26,7 @@ export class UserService {
   loginUser(user : UserModel){
     return this.httpClient.post(`${URL}${LOGIN}`,user);
   }
+  getUserByEmail(email : string){
+    return this.httpClient.get(`${URL}${GET_USERS}/${email}`);
+  }
 }

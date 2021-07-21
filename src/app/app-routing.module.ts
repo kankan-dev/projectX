@@ -14,16 +14,20 @@ const routes: Routes = [
   
   {
     path : 'dashboard',
-    component : DashboardComponent
-  },
-  {
-    path:'profile',
-    component : ProfileComponent
-  },
-  {
-    path:'welcome',
-    component : WelcomeComponent
+    component : DashboardComponent,
+    children :[
+      {
+        path : '',
+        component :WelcomeComponent
+      },
+      {
+        path : 'profile',
+        component :ProfileComponent
+      }
+    ]
   }
+  
+  
 ];
 
 @NgModule({
