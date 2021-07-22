@@ -5,3 +5,19 @@
    
     
   </mat-form-field> -->
+  <div class="container">
+    <div class="row">
+      <div class="card col-lg-6 box">
+        <form class="form" [formGroup]="welcomeForm">
+          <select class="form-control" id="state" formControlName ="statename">
+            <!-- <option value="" selected disabled>Choose State</option> -->
+            <option *ngFor="let state of statesApiData" value="{{state.state_id}}">{{state.state_name}}</option>
+          </select>
+          <select class="form-control" id="district" formControlName="districtname">
+            <!-- <option value="" selected disabled>Choose District</option> -->
+            <option *ngFor="let state of statesApiData" value="{{state.state_id}}">{{state.state_name}}</option>
+          </select>
+        </form>
+      </div>
+    </div>
+  </div>

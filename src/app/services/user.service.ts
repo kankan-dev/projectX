@@ -29,4 +29,7 @@ export class UserService {
   getUserByEmail(email : string){
     return this.httpClient.get(`${URL}${GET_USERS}/${email}`);
   }
+  getStates(){
+    return this.httpClient.get("https://cdn-api.co-vin.in/api/v2/admin/location/states");
+  }
 }
