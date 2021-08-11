@@ -7,16 +7,28 @@
   </mat-form-field> -->
   <div class="container">
     <div class="row">
-      <div class="card col-lg-6 box">
-        <form class="form" [formGroup]="welcomeForm">
-          <select class="form-control" id="state" formControlName ="statename">
-            <!-- <option value="" selected disabled>Choose State</option> -->
-            <option *ngFor="let state of statesApiData" value="{{state.state_id}}">{{state.state_name}}</option>
-          </select>
-          <select class="form-control" id="district" formControlName="districtname">
-            <!-- <option value="" selected disabled>Choose District</option> -->
-            <option *ngFor="let state of statesApiData" value="{{state.state_id}}">{{state.state_name}}</option>
-          </select>
+      <div class="card col-lg-9 box">
+        <form [formGroup]="welcomeForm">
+          <div class="row">
+            <div class="col-md-4 div-pad">
+            
+             <select class="form-control" id = "statename" (change)="loadDistrict(welcomeForm.value.statename)" formControlName="statename">
+               <option value="" selected disabled>Select a State</option>
+               <option *ngFor="let state of statesApiData" value="{{state.state_id}}">{{state.state_name}}</option>
+
+             </select>
+              <!-- <p> Selected State: {{welcomeForm.value.statename}} </p> -->
+            </div>
+            <div class="col-lg-4 div-pad">
+              <select class="form-control" id ="districtname" formControlName="districtname">
+                <option value= "" selected disabled>Select District Name</option>
+                <option *ngFor="let district of districtsApiData" value="{{district.district_id}}" >{{district.district_name}}</option>
+              </select>
+            </div>
+            <div class="col-lg-4 div-pad">
+              <button type="submit" class="btn btn-primary btn-block" style="float: right;">Search</button>
+            </div>
+          </div>
         </form>
       </div>
     </div>

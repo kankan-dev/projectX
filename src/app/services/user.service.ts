@@ -32,4 +32,7 @@ export class UserService {
   getStates(){
     return this.httpClient.get("https://cdn-api.co-vin.in/api/v2/admin/location/states");
   }
+  getDistrcts(id : any){
+    return this.httpClient.get("https://cdn-api.co-vin.in/api/v2/admin/location/districts/" + id);
+  }
 }

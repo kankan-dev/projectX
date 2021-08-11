@@ -21,6 +21,7 @@ import { ProfileComponent } from './profile/profile.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatDialogModule} from '@angular/material/dialog';
 import { LoginErrorComponent } from './login-error/login-error.component';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { LoginErrorComponent } from './login-error/login-error.component';
     MatDatepickerModule,
     MatSnackBarModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
