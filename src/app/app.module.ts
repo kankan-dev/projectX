@@ -22,6 +22,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatDialogModule} from '@angular/material/dialog';
 import { LoginErrorComponent } from './login-error/login-error.component';
 import {MatSelectModule} from '@angular/material/select';
+import { GitTestComponent } from './git-test/git-test.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import {MatSelectModule} from '@angular/material/select';
     NavComponent,
     WelcomeComponent,
     ProfileComponent,
-    LoginErrorComponent
+    LoginErrorComponent,
+    GitTestComponent
   ],
   imports: [
     BrowserModule,
